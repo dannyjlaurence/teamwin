@@ -41,7 +41,6 @@
     height: 700px;
     position: relative;
 }
-
 #subContainer{
     width: 700px;
     height: 700px;
@@ -49,9 +48,10 @@
 }
 
 #middleBubble {
+
   text-align:center;
   vertical-align:top;
-  background: rgb(60, 170, 130);
+  background: white;
   background-repeat: no-repeat;
   background-size: cover;
   color: #252525; 
