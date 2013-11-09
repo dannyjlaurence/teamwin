@@ -93,7 +93,7 @@
 
 include 'database.inc.php';
 
-stmt = $database->prepare("SELECT * FROM `category`");
+$stmt = $database->prepare("SELECT * FROM `category`");
 $stmt->execute();
 $res = $stmt->get_result();
 $count = 1;
