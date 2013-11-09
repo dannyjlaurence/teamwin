@@ -98,7 +98,7 @@ $stmt->execute();
 $res = $stmt->get_result();
 $count = 1;
 while($row = $res->fetch_array(MYSQLI_NUM)){
-    echo "<div class = 'bubble' id = 't".$count."'>".$row[1]."</div>";
+    echo "<div class = 'bubble' id = 't".$count."'>".$row[2]."</div>";
     $count = $count + 1;
 }
 
