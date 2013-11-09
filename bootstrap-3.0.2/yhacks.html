@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>BubHub</title>
+    <link rel="stylesheet" href="yhacks.css" type="text/css" />
+</head>
+<body>
+    <h1 id="title">BubHub</h1>
+    <h1 id="teamwin">#TeamWin, YHACK2013</h1>
+    <p>
+        A web application that collects popular news stories through Twitter
+        and creates a bubble map visual of the data.
+    </p>
+    
+
+</body>
+
+
+    <script type="text/javascript" src = "js/jquery-2.0.3.js"></script>
+<script type="text/javascript">
+        var topic = new Array();
+        var tmpLeft, tmpTop;
+        var currTopic;
+        
+        var count = 0;
+        for (count = 0; count < 10; count++) {
+            topic[count] = [];
+            topic[count].topic = count;
+            topic[count].topicNum = count;
+            topic[count].subTopics = new Array();
+            /*array for subtopics, will be used?*/
+            for(var j = 0; j < 20; j++){
+                topic[count].subTopics[j] = [];
+            }
+        }
+        
+        /*guesstimations ya feel*/
+        topic[0].totalTweets = 10900;
+        topic[1].totalTweets = 10890;
+        topic[2].totalTweets = 8900;
+        topic[3].totalTweets = 7000;
+        topic[4].totalTweets = 11220;
+        topic[5].totalTweets = 12560;
+        topic[6].totalTweets = 13409;
+        topic[7].totalTweets = 9000;
+        topic[8].totalTweets = 10352;
+        topic[9].totalTweets = 12459;
+        
+        /*test first topic's subtopics, print something out*/
+        for(count = 0; count < 20; count++){
+            topic[0].subTopics[count] = count;
+        }
+        
+        var totalNumTweets = topic[1].totalTweets+topic[2].totalTweets+topic[3].totalTweets+
+            topic[4].totalTweets+topic[5].totalTweets+topic[6].totalTweets+topic[7].totalTweets+
+            topic[8].totalTweets+topic[9].totalTweets+topic[0].totalTweets;
+            
+        for(count = 0; count < 10; count++){
+            topic[count].perc = Math.floor((topic[count].totalTweets / totalNumTweets)*1000);
+        }
+        
+        /*not being used*/
+        var subTopFunc = function(i){
+            alert(i);
+            var subBubbles = new Array();
+        //    $(".bubbles").css("display", "none");
+        $(".bubble").hide();
+        document.writeln("<div id = \"subContainer\">hi</div>");
+        document.body.style.backgroundColor = "red";
+        /*var subcatString = "<span id=\"middleSubBubble\">&nbsp;</span>";
+        for(count = 0; count < topic[i].subTopics.length; count++){
+            subcatString += "<div class = \"subBubble\">"+topic[i].subTopics[count]+"</div>";
+        }
+        alert(subcatString);
+        document.getElementById("#container").innerHTML = subcatString;
+       // $("#subContainer").html(subcatString);
+        //    document.writeln("<span id=\"middleSubBubble\">&nbsp;</span>");
+        //    for(count = 0; count < topic[i].subTopics.length; count++){
+        //        document.writeln("<div class = \"subBubble\">"+topic[i].subTopics[count]+"</div>");
+        //    }
+        //    document.writeln("</div>");
+        */
+        };
+        
+        document.writeln("<div id=\"container\">");
+        document.writeln("<span id=\"middleBubble\">&nbsp;</span>");
+        
+        document.writeln("<div class = \"bubble\" id = 't0'>"+topic[0].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't1'>"+topic[1].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't2'>"+topic[2].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't3'>"+topic[3].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't4'>"+topic[4].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't5'>"+topic[5].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't6'>"+topic[6].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't7'>"+topic[7].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't8'>"+topic[8].topic+"</div>");
+        document.writeln("<div class = \"bubble\" id = 't9'>"+topic[9].topic+"</div>");
+        
+        /*$("#t0").click(function(){
+            subTopFunc(0);
+        });*/
+        document.writeln("</div>");
+        
+    
+    $(document).ready(function(){
+        //Center the "info" bubble in the  "circle" div
+        var divTop = ($("#container").height() - $("#middleBubble").height())/2;
+        var divLeft = ($("#container").width() - $("#middleBubble").width())/2;
+        $("#middleBubble").css("top",divTop + "px");
+        $("#middleBubble").css("left",divLeft + "px");
+        
+     //Arrange the icons in a circle centered in the div
+     numItems = $( "#container div" ).length; //How many items are in the circle?
+     start = 0.25; //the angle to put the first image at. a number between 0 and 2pi
+     step = (2*Math.PI)/numItems; //calculate the amount of space to put between the items.
+    
+     //puts in circle
+     count = 0;
+     $( "#container div" ).each(function( index ) {
+          radius = ($("#container").width() - $(this).width())/2;
+          tmpTop = (($("#container").height()/2) + radius * Math.sin(start)) - ($(this).height()/2);
+          tmpLeft = (($("#container").width()/2) + radius * Math.cos(start)) - ($(this).width()/2);
+          start += step; //arranges in a circle proportionately
+                 
+          //set the top/left settings for the image
+          $(this).css("top",tmpTop);
+          $(this).css("left",tmpLeft);
+          $(this).css("width", 50+topic[count].perc);
+          $(this).css("height", 50+topic[count].perc);
+          count++;
+     });
+     
+ });
+     
+        </script>
+</html>

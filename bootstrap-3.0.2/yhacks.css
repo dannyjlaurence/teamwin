@@ -1,0 +1,97 @@
+#title{
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 3em;
+    font-weight: bold;
+    color: rgb(35, 23, 67);
+}
+
+#teamwin{
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 1em;
+    color: rgb(35, 27, 63);
+}
+
+body{
+    text-align: center;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: rgb(60, 170, 130);
+    color: rgb(35, 27, 63);
+}
+
+.bubble{
+    position:  absolute;
+    border: solid;
+    border-color: aquamarine;
+    background: aquamarine;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    transition:width 300ms ease-in-out, height 300ms ease-in-out;
+}
+
+
+.subBubble{
+    color: red;
+    position:  absolute;
+    border: solid;
+    border-color: aquamarine;
+    background: aquamarine;
+    border-radius: 100%;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    -webkit-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -moz-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    -o-transition:width 300ms ease-in-out, height 300ms ease-in-out;
+    transition:width 300ms ease-in-out, height 300ms ease-in-out;    
+}
+
+#container{
+    width: 700px;
+    height: 700px;
+    position: relative;
+}
+#subContainer{
+    background: rgb(250, 170, 130);
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+
+#middleBubble {
+
+  text-align:center;
+  vertical-align:top;
+  background: rgb(60, 170, 130);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #252525; 
+  height:21%;       
+  width: 21%;
+  margin: auto;
+  position: absolute;
+  text-align:center;
+}
+
+#middleSubBubble{
+  text-align:center;
+  vertical-align:top;
+  background: rgb(60, 170, 130);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: yellow;
+  color: #252525; 
+  height:21%;       
+  width: 21%;   
+  margin: auto;
+  position: absolute;
+  text-align:center;
+}
+
+
