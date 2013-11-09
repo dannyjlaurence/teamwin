@@ -117,20 +117,6 @@
         
         /*guesstimations ya feel*/
 
-        <?php
-
-include 'database.inc.php';
-
-$stmt = $database->prepare("SELECT * FROM `category`");
-$stmt->execute();
-$res = $stmt->get_result();
-$count = 1;
-while($row = $res->fetch_array(MYSQLI_NUM)){
-    echo "topic[".$count."].totalTweets = ".$row[2].";";
-    $count = $count + 1;
-}
-
-?>
         topic[0].totalTweets = 10900;
         topic[1].totalTweets = 10890;
         topic[2].totalTweets = 8900;
@@ -206,21 +192,6 @@ while($row = $res->fetch_array(MYSQLI_NUM)){
         
         document.writeln("<div id=\"container\">");
         document.writeln("<span id=\"middleBubble\">&nbsp;</span>");
-        
-<?php
-
-include 'database.inc.php';
-
-$stmt = $database->prepare("SELECT * FROM `category`");
-$stmt->execute();
-$res = $stmt->get_result();
-$count = 1;
-while($row = $res->fetch_array(MYSQLI_NUM)){
-    echo "document.writeln(\"<div class = \"bubble\" id = 't".$count."'>\"+topic[".$count."].topic+\"</div>\");";
-    $count = $count + 1;
-}
-
-?>
 
         document.writeln("<div class = \"bubble\" id = 't0'>"+topic[0].topic+"</div>");
         document.writeln("<div class = \"bubble\" id = 't1'>"+topic[1].topic+"</div>");
