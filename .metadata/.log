@@ -1,0 +1,131 @@
+!SESSION 2013-11-08 18:56:11.175 -----------------------------------------------
+eclipse.buildId=4.3.0.M20130911-1000
+java.version=1.7.0_11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.standard.product -keyring /Users/dannyjl/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.standard.product -keyring /Users/dannyjl/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2013-11-08 19:25:22.498
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.core.filesystem 4 0 2013-11-08 20:54:21.966
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /Applications/eclipse/plugins/org.eclipse.core.filesystem_1.4.0.v20130514-1240.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:329)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.basicOpen(ZipBundleFile.java:87)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.getZipFile(ZipBundleFile.java:100)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.checkedOpen(ZipBundleFile.java:73)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.getEntry(ZipBundleFile.java:245)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:548)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:492)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:465)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getFileSystem(InternalFileSystemCore.java:70)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getLocalFileSystem(InternalFileSystemCore.java:89)
+	at org.eclipse.core.filesystem.EFS.getLocalFileSystem(EFS.java:447)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.getHistoryStore(FileSystemResourceManager.java:491)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1156)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /Applications/eclipse/plugins/org.eclipse.core.filesystem_1.4.0.v20130514-1240.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:214)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:144)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:158)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:312)
+	... 29 more
+
+!ENTRY org.eclipse.core.filesystem.macosx 4 0 2013-11-08 20:54:21.976
+!MESSAGE FrameworkEvent ERROR
+!STACK 0
+java.io.IOException: Exception in opening zip file: /Applications/eclipse/plugins/org.eclipse.core.filesystem.macosx_1.3.0.v20100505-2103.jar
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:329)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.basicOpen(ZipBundleFile.java:87)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.getZipFile(ZipBundleFile.java:100)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.checkedOpen(ZipBundleFile.java:73)
+	at org.eclipse.osgi.baseadaptor.bundlefile.ZipBundleFile.getEntry(ZipBundleFile.java:245)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findClassImpl(ClasspathManager.java:548)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClassImpl(ClasspathManager.java:501)
+	at org.eclipse.osgi.baseadaptor.loader.ClasspathManager.findLocalClass(ClasspathManager.java:465)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.findLocalClass(DefaultClassLoader.java:216)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:464)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getFileSystem(InternalFileSystemCore.java:70)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getLocalFileSystem(InternalFileSystemCore.java:89)
+	at org.eclipse.core.filesystem.EFS.getLocalFileSystem(EFS.java:447)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.getHistoryStore(FileSystemResourceManager.java:491)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1156)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: java.io.FileNotFoundException: /Applications/eclipse/plugins/org.eclipse.core.filesystem.macosx_1.3.0.v20100505-2103.jar (No such file or directory)
+	at java.util.zip.ZipFile.open(Native Method)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:214)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:144)
+	at java.util.zip.ZipFile.<init>(ZipFile.java:158)
+	at org.eclipse.osgi.framework.util.SecureAction.getZipFile(SecureAction.java:312)
+	... 29 more
+
+!ENTRY org.eclipse.ui.ide 4 4 2013-11-08 20:54:24.315
+!MESSAGE Problems saving workspace
+
+!ENTRY org.eclipse.ui.ide 4 1 2013-11-08 20:54:24.321
+!MESSAGE Problems occurred while trying to save the state of the workbench.
+!SUBENTRY 1 org.eclipse.ui.ide 4 1 2013-11-08 20:54:24.321
+!MESSAGE Internal Error
+!STACK 0
+java.lang.Error: org.eclipse.core.runtime.CoreException: Plug-in org.eclipse.core.filesystem was unable to load class org.eclipse.core.internal.filesystem.local.LocalFileSystem.
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getLocalFileSystem(InternalFileSystemCore.java:92)
+	at org.eclipse.core.filesystem.EFS.getLocalFileSystem(EFS.java:447)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.getHistoryStore(FileSystemResourceManager.java:491)
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1156)
+	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2376)
+	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:508)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.runtime.CoreException: Plug-in org.eclipse.core.filesystem was unable to load class org.eclipse.core.internal.filesystem.local.LocalFileSystem.
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.throwException(RegistryStrategyOSGI.java:194)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:176)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getFileSystem(InternalFileSystemCore.java:70)
+	at org.eclipse.core.internal.filesystem.InternalFileSystemCore.getLocalFileSystem(InternalFileSystemCore.java:89)
+	... 6 more
+Caused by: java.lang.ClassNotFoundException: org.eclipse.core.internal.filesystem.local.LocalFileSystem cannot be found by org.eclipse.core.filesystem_1.4.0.v20130514-1240
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:501)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:421)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:412)
+	at org.eclipse.osgi.internal.baseadaptor.DefaultClassLoader.loadClass(DefaultClassLoader.java:107)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:356)
+	at org.eclipse.osgi.internal.loader.BundleLoader.loadClass(BundleLoader.java:340)
+	at org.eclipse.osgi.framework.internal.core.BundleHost.loadClass(BundleHost.java:229)
+	at org.eclipse.osgi.framework.internal.core.AbstractBundle.loadClass(AbstractBundle.java:1212)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	... 11 more
