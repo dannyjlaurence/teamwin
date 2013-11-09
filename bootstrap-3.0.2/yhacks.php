@@ -89,7 +89,20 @@
         <div class="col-lg-12">
 
 
-      <!-- FOOTER -->
+<?php
+
+include 'database.inc.php';
+
+stmt = $database->prepare("SELECT * FROM `category`");
+$stmt->execute();
+$res = $stmt->get_result();
+$count = 1;
+while($row = $res->fetch_array(MYSQLI_NUM)){
+    echo "<div class = 'bubble' id = 't".$count++."'>".$row['cat_desc']."</div>";
+}
+
+?>
+
 
 
     <!-- Bootstrap core JavaScript
