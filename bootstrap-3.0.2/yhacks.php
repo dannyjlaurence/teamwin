@@ -12,6 +12,7 @@
 
     <!-- Bootstrap core CSS -->
     <link href="dist/css/bootstrap.css" rel="stylesheet">
+    <link href="yhacks.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy this line! -->
     <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -94,11 +95,6 @@
       <hr class="featurette-divider">
 
       <!-- FOOTER -->
-      <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-    </div><!-- /.container -->
 
 
     <!-- Bootstrap core JavaScript
@@ -283,6 +279,13 @@
      
  });
 </script>
+
+  <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+      </footer>
+    
+    </div><!-- /.container -->
     <script src="dist/js/bootstrap.min.js"></script>
     <script src="docs-assets/js/holder.js"></script>
   </body>
