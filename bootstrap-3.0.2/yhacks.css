@@ -1,30 +1,4 @@
-#title{
-    text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 3em;
-    font-weight: bold;
-    color: rgb(35, 23, 67);
-}
 
-#teamwin{
-    text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    font-size: 1em;
-    color: rgb(35, 27, 63);
-}
-
-body{
-    text-align: center;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-    background-color: rgb(60, 170, 130);
-    color: rgb(35, 27, 63);
-    
-    background-image: url("yhacks_insta.jpg");
-    background-size: 200px;
-    background-repeat: repeat-y; /* try repeat-x, repeat-y, no-repeat, repeat */
-    background-attachment: fixed; /* try scroll, fixed */
-    background-position: right; 
-}
 
 .bubble{
     position:  absolute;
@@ -67,6 +41,7 @@ body{
     height: 700px;
     position: relative;
 }
+
 #subContainer{
     width: 700px;
     height: 700px;
@@ -74,7 +49,6 @@ body{
 }
 
 #middleBubble {
-
   text-align:center;
   vertical-align:top;
   background: rgb(60, 170, 130);
